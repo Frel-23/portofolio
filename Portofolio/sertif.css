@@ -19,6 +19,10 @@
 }
 
 /* All */
+.logopad {
+    max-height: 80px;
+}
+
 body {
     overflow-x: hidden;
     background-color: var(--primary);
