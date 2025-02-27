@@ -1,0 +1,119 @@
+/* <-- Variabel Global --> */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --header-height: 3rem;
+
+    /* colors */
+    --primary: #1B1C22;
+    --secondary: #FBB465;
+    --silver: #E6E6E6;
+
+    /* fonts */
+    --fontDefaults: 'Poppins', sans-serif;
+    --fontLogo: 'Kanit', sans-serif;
+    --heading1: 2.625rem;
+    --heading2: 1.875rem;
+    --normal-font-size: 1.125rem;
+
+    /* z-index */
+    --z-fixed: 1;
+}
+
+/* All */
+.logopad {
+    max-height: 80px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--primary);
+    scroll-behavior: smooth;
+    font-family: var(--fontDefaults);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--fontLogo);
+    font-size: var(--heading1);
+    color: var(--silver);
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid var(--secondary);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.section:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.section h2 {
+    font-family: var(--fontLogo);
+    font-size: var(--heading2);
+    color: var(--silver);
+}
+
+.section p {
+    font-size: var(--normal-font-size);
+    color: var(--silver);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: calc(var(--heading1) * 0.9);
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: calc(var(--heading2) * 0.9);
+    }
+
+    .section p {
+        font-size: calc(var(--normal-font-size) * 0.8);
+    }
+}

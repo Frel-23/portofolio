@@ -1,0 +1,118 @@
+/* <-- Variabel Global --> */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --header-height: 3rem;
+
+    /* colors */
+    --primary: #1B1C22;
+    --secondary: #FBB465;
+    --silver: #E6E6E6;
+
+    /* fonts */
+    --fontDefaults: 'Poppins', sans-serif;
+    --fontLogo: 'Kanit', sans-serif;
+    --heading1: 2.625rem;
+    --heading2: 1.875rem;
+    --normal-font-size: 1.125rem;
+    --nav-font-size: 1rem;
+}
+
+/* All */
+body {
+    overflow-x: hidden;
+    background-color: var(--primary);
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--fontLogo);
+    font-size: var(--heading1);
+    color: var(--silver);
+}
+
+/* Sertifikat Section */
+.certificates {
+    max-width: 600px; /* Lebar maksimum untuk sertifikat */
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificates h2 {
+    width: 100%;
+    font-size: var(--heading2);
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--silver);
+}
+
+.certificate {
+    margin: 10px 0; /* Margin atas dan bawah untuk jarak antar gambar */
+    border: 1px solid var(--silver);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 100%; /* Gambar akan menyesuaikan dengan lebar kontainer */
+}
+
+.certificate img {
+    width: 100%; /* Gambar akan menyesuaikan dengan lebar kontainer */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio */
+}
+
+/* Efek hover untuk sertifikat */
+.certificate:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--silver);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .certificates {
+        padding: 10px;
+        max-width: 100%; /* Lebar maksimum untuk tampilan mobile */
+    }
+
+    .certificate {
+        margin: 5px 0; /* Margin lebih kecil untuk tampilan mobile */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk header */
+    }
+
+    .certificates h2 {
+        font-size: 1.25rem; /* Ukuran font lebih kecil untuk subjudul */
+    }
+}
